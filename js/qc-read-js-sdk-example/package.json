@@ -1,0 +1,19 @@
+{
+  "name": "qc-read-js-sdk-example",
+  "version": "1.0.0",
+  "description": "Examples for qc-read-js-sdk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pqc",
+    "quantum",
+    "sdk"
+  ],
+  "author": "Doge Protocol Community",
+  "license": "MIT",
+  "dependencies": {
+    "qc-read-js-sdk": "^1.0.0"
+  }
+}
