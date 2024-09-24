@@ -1,9 +1,9 @@
 var QcReadApi = require('qc-read-js-sdk');
 
-var apiClient = new QcReadApi.ApiClient("https://scan.dpapi.org");
-var api = new QcReadApi.AccountsApi(apiClient)
+var apiClient = new QcReadApi.ApiClient("https://relayread1.dpapi.org");
+var api = new QcReadApi.ReadApi(apiClient);
 
-var address = "0xb33c7584ffd241e204e3ec8f4559ab4752ef05396cdbeb4480f2037f5caa0d2c"; // {String} the string representing the address
+var address = "0x0000000000000000000000000000000000000000000000000000000000001000"; // {String} the string representing the address
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
@@ -14,12 +14,9 @@ var callback = function(error, data, response) {
     console.log("address = " + address);
     console.log("balance = " + data.result.balance);
     console.log("nonce = " + data.result.nonce);
-    /*console.log("nonce = " + data.nonce);
-    console.log("blockNumber = " + data.blockNumber);
-    console.log("blockDate = " + data.blockDate);*/
   }
 };
 
-api.getAccountBalance(address, callback);
+api.getAccountDetails(address, callback);
 
 
